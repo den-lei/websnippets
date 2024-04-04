@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation1</title>
+</head>
+<body>
+  <div id="animation"></div>
+
+  <script>
+  function animate() {
+      const characters = "/|\\-";
+      let index = 0;
+      const animationElement = document.getElementById("animation");
+  
+      setInterval(() => {
+          animationElement.textContent = characters[index];
+          index = (index + 1) % characters.length;
+      }, 100); // Pausiere für 0.5 Sekunden zwischen den Zeichen
+  }
+  
+  animate();
+  </script>
+</body>
+</html>
